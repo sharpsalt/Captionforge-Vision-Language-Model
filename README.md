@@ -128,7 +128,9 @@ For a visual diagram, use tools like Draw.io or Lucidchart to create a flowchart
 - Augmentations: Image (random crop, flip, jitter); Captions (15% synonym replacement probability).
 
 ## Results
-Evaluated on 200 test samples. BLEU scores (higher is better):
+Evaluated on 1000 test samples. BLEU scores (higher is better):
+<img width="1420" height="349" alt="image" src="https://github.com/user-attachments/assets/1733e51d-2a6e-4e74-8b6c-98111f258a2c" />
+
 
 
 (Note: Actual scores depend on training run; these are placeholders based on typical Flickr8k results. Run the script for exact values.)
