@@ -116,34 +116,8 @@ The model follows an encoder-decoder paradigm tailored for image captioning:
    - Parameters: ~25M total, ~2M trainable (due to frozen backbone).
 
 ### Architecture Diagram (Text-Based)
-```
-Image (224x224 RGB)
-    |
-    v
-ResNet50 Backbone (Frozen)
-    |  (Feature Maps: 2048 channels, 7x7 spatial)
-    v
-Projection (1x1 Conv + ReLU + Dropout)
-    |  (Sequence: Batch x 49 tokens x 256 dim)
-    v
-Encoder Output (Visual Embeddings)
-    |
-    +-------------------+
-                        |
-Caption Tokens         v
-    |              Transformer Decoder
-    v                 - Embedding + Positional Encoding
-Embedding           - Multi-Head Self-Attention (Causal Mask)
-    |               - Multi-Head Cross-Attention (w/ Encoder)
-    v               - Feed-Forward Network
-Positional Encoding  - Dropout & LayerNorm
-    |               (Repeated x 4 layers)
-    v
-Decoder Input
-    |
-    v
-Token Predictions (Softmax over Vocab)
-```
+<img width="660" height="800" alt="image" src="https://github.com/user-attachments/assets/d215b32f-5da3-4509-8b5b-5c5afb1a717c" />
+
 
 For a visual diagram, use tools like Draw.io or Lucidchart to create a flowchart based on this description.
 
